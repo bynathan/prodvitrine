@@ -903,7 +903,12 @@ footer .bottom p:last-child{
     }
 }
 
-/*Style +18 Popup*/
+/*Style +18 Screen*/
+
+/*Import font*/
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Inder&family=Istok+Web:wght@400;700&family=Meera+Inimai&display=swap');
+
+/*Style age page*/
 .container-age{
     width: 100vw;
     height: 100vh;
@@ -914,15 +919,14 @@ footer .bottom p:last-child{
     align-items: start;
     justify-content: center;
     background-image: linear-gradient(#514E53, #262F2F);
-    z-index: 5;
-    overflow-y: auto;
+    z-index: 4;
 }
 
 .container-age.verifiqued{
     display: none !important;
 }
 
-.container-age::-webkit-scrollbar{
+.age::-webkit-scrollbar{
     width: 0px;
 }
 
@@ -930,56 +934,58 @@ footer .bottom p:last-child{
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 50px;
-    padding: 15px 10px;
-    margin: auto 0;
     position: fixed;
-    left: 0;
-    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 50px 15px;
+    z-index: 4;
 }
 
 .age img{
-    width: 100px;
-    min-width: 100px;
-    height: 107px;
-    min-height: 107px;
+    width: 370px;
+    min-width: 370px;
+    height: 370px;
+    min-height: 370px;
+    margin: 0 0 125px;
 }
 
 .age h1{
-    color: #FFF;
     text-align: center;
-    font-family: "Meera Inimai";
-    font-size: 25px;
-    font-style: normal;
+    font-size: 32px;
     font-weight: 400;
-    line-height: normal;
-}
-
-.age .infos{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.age .infos p{
+    font-family: 'Meera Inimai', sans-serif;
     color: #C1BAC2;
+    margin: 0 0 20px 0;
+}
+
+.age h2{
     text-align: center;
-    font-family: "Istok Web", sans-serif;
-    font-size: 11px;
-    font-style: normal;
+    font-size: 24px;
     font-weight: 700;
-    line-height: normal;
+    font-family: "Istok Web", sans-serif;
+    color: #C1BAC2;
+    margin: 0 0 30px 0;
+}
+
+.age h2:nth-child(3){
+    margin: 0 0 10px 0;
+}
+
+.age h2:nth-child(4){
+    margin: 0 0 30px 0;
 }
 
 .age label{
     width: unset;
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    margin: 0 0 52px 0;
     cursor: pointer;
 }
 
 .age label input{
+    width: 18px;
+    height: 18px;
     display: none;
 }
 
@@ -988,64 +994,65 @@ footer .bottom p:last-child{
 }
 
 .age label div{
-    height: 20px;
-    min-height: 20px;
-    width: 20px;
-    min-width: 20px;
+    height: 44px;
+    min-height: 44px;
+    width: 44px;
+    min-width: 44px;
     border: 1px solid #ECEAEC;
     background: #242426;
     position: relative;
-    border-radius: 5px;
 }
 
 .age label div::before{
     content: '';
     opacity: 0;
-    height: 9px;
-    width: 6px;
-    border-right: 2px solid #ECEAEC;
-    border-bottom: 2px solid #ECEAEC;
+    height: 25px;
+    width: 14px;
+    border-right: 4px solid #ECEAEC;
+    border-bottom: 4px solid #ECEAEC;
     border-radius: 2px;
     transform: rotate(45deg);
     position: absolute;
-    left: 5px;
-    bottom: 5px;
-    transition: opacity .4s;
+    left: 11px;
+    bottom: 10px;
+    transition: opacity .2s;
 }
 
 .age label p{
+    width: unset;
     color: #FFF;
     font-family: 'Alatsi', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0 0 0 20px;
 }
 
 
 .age label p a{
     color: #00B2FF;
     font-family: 'Inder', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-decoration-line: underline;
-}
-
-.age .actions{
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-}
-
-.age .actions a{
     text-decoration: none;
 }
 
-.age .actions input{
-    width: 145px;
-    height: 30px;
+.age div{
+    max-width: 573px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 23px;
+    margin: 10px 0 0 0;
+}
+
+.age div input{
+    padding: 5px 0 0 0;
+    width: 272px;
+    height: 93px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1055,53 +1062,137 @@ footer .bottom p:last-child{
     color: #FFF;
     text-align: center;
     font-family: "Istok Web", sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 35px;
-    letter-spacing: 4px;
+    line-height: 141.667%;
+    letter-spacing: 4.8px;
     cursor: pointer;
-    transition: background .4s;
+    transition: background .2s;
 }
 
-.age .actions input:disabled{
-    background: gray !important;
-    color: #242426 !important;
-    cursor: not-allowed !important;
+.age div a{
+    text-decoration: none;
 }
 
-.age .actions input:first-child{
+.age div input:first-child{
     background: #50AD51;
 }
 
-.age .actions input:first-child:hover{
-    background: #336e34;
+.age div input:disabled{
+    background: gray !important;
+    color: black !important;
+    cursor: not-allowed !important;
 }
 
-.age .actions input:last-child{
+.age div input:first-child:hover{
+    background: #439045;
+}
+
+.age div input:last-child{
     background: #940000;
 }
 
-.age .actions input:last-child:hover{
-    background: #550101;
+.age div input:last-child:hover{
+    background: #5f0101;
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) and (max-height: 945px){
+    .age img {
+        width: 370px;
+        min-width: 370px;
+        height: 370px;
+        min-height: 370px;
+        margin: 0 0 60px;
+    }
+}
+
+@media(min-width: 768px) and (max-height: 870px){
+    .age img {
+        width: 247px;
+        min-width: 247px;
+        height: 258px;
+        min-height: 258px;
+        margin: 0 0 60px;
+    }
+}
+
+@media(min-width: 768px) and (max-height: 780px){
     .age {
-        row-gap: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 25px 15px;
+        z-index: 4;
+    }
+}
+
+@media(min-width: 768px) and (max-height: 730px){
+    .age img {
+        width: 247px;
+        min-width: 247px;
+        height: 258px;
+        min-height: 258px;
+        margin: 0 0 30px;
     }
 
     .age h1 {
-        color: #FFF;
-        text-align: center;
-        font-family: "Meera Inimai", sans-serif;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        font-size: 28px;
+        margin: 0 0 15px 0;
     }
 
-    .age .infos p{
+    .age h2 {
+        font-size: 20px;
+        margin: 0 0 15px 0;
+    }
+
+    .age label {
+        margin: 0 0 auto 0;
+    }
+}
+
+@media(min-width: 768px) and (max-height: 670px){
+    .age img{
+        width: 120px;
+        min-width: 120px;
+        height: 125px;
+        min-height: 125px;
+        margin: 0 0 auto 0;
+    }
+}
+
+@media(max-width: 768px){
+    .age div:last-child{
+        flex-direction: column;
+        gap: 29px;
+        margin: 0 0 80px 0;
+    }
+
+    .age div input{
+        width: 270px;
+    }
+
+    .age img{
+        width: 247px;
+        min-width: 247px;
+        height: 258px;
+        min-height: 258px;
+        margin: 80px 0 51px 0;
+    }
+
+    .age h1{
+        text-align: center;
+        font-family: "Meera Inimai", sans-serif;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166.667%;
+    }
+
+    .age h2{
         color: #C1BAC2;
         text-align: center;
         font-family: "Istok Web", sans-serif;
@@ -1111,80 +1202,195 @@ footer .bottom p:last-child{
         line-height: normal;
     }
 
-    .age .actions {
-        column-gap: 30px;
-    }
-
-    @media(max-width: 1439px) and (max-height: 735px){
-        .age {
-            height: 100%;
-            row-gap: unset;
-            justify-content: space-between;
-        }
-        @media(max-width: 1439px) and (max-height: 400px){
-            .age {
-                row-gap: 20px;
-            }
-        }
-    }
-}
-
-@media(min-width: 1440px){
-    .age {
-        row-gap: 80px;
-    }
-
-    .age img{
-        width: 200px;
-        min-width: 200px;
-        height: 214px;
-        min-height: 214px;
-    }
-
-    .age h1 {
+    .age label p{
         color: #FFF;
-        text-align: center;
-        font-family: "Meera Inimai", sans-serif;
-        font-size: 40px;
+        font-family: 'Alatsi', sans-serif;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
 
-    .age .infos br{
-        display: none;
+    .age label p a{
+        color: #00B2FF;
+        font-family: 'Inder', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
     }
 
-    .age .infos p{
+    .age label div {
+        height: 44px;
+        min-height: 44px;
+        width: 44px;
+        min-width: 44px;
+        border: 1px solid #ECEAEC;
+        background: #242426;
+        position: relative;
+    }
+
+    .age label div::before {
+        content: '';
+        opacity: 0;
+        height: 25px;
+        width: 14px;
+        border-right: 4px solid #ECEAEC;
+        border-bottom: 4px solid #ECEAEC;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 11px;
+        bottom: 10px;
+        transition: opacity .2s;
+    }
+}
+
+@media(max-width: 768px) and (max-height: 1000px){
+    .age{
+        padding: 20px 15px;
+    }
+
+    .age h1{
+        margin: 0;
+    }
+
+    .age img{
+        margin: 0 0 auto 0;
+    }
+
+    .age div:last-child {
+        margin: 0 0 20px 0;
+    }
+
+    .age div:last-child {
+        margin: 0;
+        row-gap: 15px;
+    }
+
+    .age label {
+        margin: 0 0 auto 0;
+    }
+}
+
+@media(max-width: 768px) and (max-height: 800px){
+    .age img {
+        width: 120px;
+        min-width: 120px;
+        height: 125px;
+        min-height: 125px;
+    }
+
+    .age div input{
+        width: 170px;
+        height: 58px;
+    }
+}
+
+@media(max-width: 559px){
+    .age div:last-child{
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 0 50px 0;
+    }
+
+    .age div input{
+        width: 170px;
+        height: 58px;
+    }
+
+    .age img{
+        width: 120px;
+        min-width: 120px;
+        height: 125px;
+        min-height: 125px;
+        margin: 50px 0 24px 0;
+    }
+
+    .age h1{
+        text-align: center;
+        font-family: "Meera Inimai", sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 166.667%;
+    }
+
+    .age h2{
         color: #C1BAC2;
         text-align: center;
         font-family: "Istok Web", sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
 
-    .age .actions input{
-        height: 60px;
-        line-height: 66px;
+    .age label p{
+        color: #FFF;
+        font-family: 'Alatsi', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
-    @media(min-width: 769px) and (max-height: 750px){
-        .age{
-            height: 100%;
-            justify-content: space-between;
-            row-gap: unset;
-        }
-        @media(min-width: 769px) and (max-height: 480px){
-            .age{
-                height: unset;
-                row-gap: 20px;
-            }
-        }
+
+    .age label p a{
+        color: #00B2FF;
+        font-family: 'Inder', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+
+    .age label div {
+        height: 28px;
+        min-height: 28px;
+        width: 28px;
+        min-width: 28px;
+        border: 1px solid #ECEAEC;
+        background: #242426;
+        position: relative;
+    }
+
+    .age label div::before {
+        content: '';
+        opacity: 0;
+        height: 15px;
+        width: 8px;
+        border-right: 4px solid #ECEAEC;
+        border-bottom: 4px solid #ECEAEC;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 8px;
+        bottom: 7px;
+        transition: opacity .2s;
     }
 }
 
-/*Stryle Welcome Popup*/
+@media (max-width: 559px) and (max-height: 1000px){
+    .age img {
+        margin: 0 0 auto 0;
+    }
+
+    .age div:last-child {
+        margin: 0 0 0 0;
+    }
+}
+
+@media (max-width: 559px) and (max-height: 680px){
+    .age h1 {
+        font-size: 30px;
+    }
+}
+
+/*Welcome Style*/
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Inter:wght@100..900&display=swap');
+
 .container-welcome{
     display: flex;
     flex-direction: column;
@@ -1194,9 +1400,10 @@ footer .bottom p:last-child{
     position: fixed;
     left: 0;
     top: 0;
+    background: #00000080;
     overflow-y: auto;
-    background-image: linear-gradient(#514E53, #262F2F);
-    z-index: 4;
+    padding: 50px 15px;
+    z-index: 3;
 }
 
 .container-welcome.verifiqued{
@@ -1208,19 +1415,38 @@ footer .bottom p:last-child{
 }
 
 .welcome{
-    width: 100%;
     margin: auto 0;
-    padding: 0 10px;
+    border-radius: 30px;
+    background-image: linear-gradient(180deg, #514E53 0%, #262F2F 100%);
+    padding: 44px 56px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 50px;
-    position: fixed;
-    left: 0;
-    top: 0;
+    max-width: 372px;
+    position: relative;
 }
 
-.welcome span{
+.welcome h1{
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.welcome p{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.welcome h2{
     color: #FFF;
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -1229,186 +1455,77 @@ footer .bottom p:last-child{
     font-weight: 700;
     line-height: normal;
     position: absolute;
-    top: 8px;
     right: 20px;
+    top: 6px;
     cursor: pointer;
-    transition: color .4s;
+    transition: color .2s;
 }
 
-.welcome span:hover{
-    color: #940000;
+.welcome h2:hover{
+    color: #6a0101;
 }
 
-.welcome div{
-    display: flex;
-    align-items: center;
-    margin: 60px 0 0 0;
-}
-
-.welcome div h1{
-    color: #FFF;
-    text-align: center;
-    font-family: "Antic Didone", sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.welcome div img{
-    width: 60px;
-    min-width: 60px;
-    height: 64px;
-    min-height: 64px;
-    margin: 0 0 0 10px;
-}
-
-.welcome p{
+.welcome input{
+    width: 100%;
+    height: 47px;
+    border-radius: 9px;
+    background: #50AD51;
+    border: none;
     color: #FFF;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: normal;
+    cursor: pointer;
+    transition: background .2s;
+}  
+
+.welcome input:hover{
+    background: #439045;
 }
 
 .welcome a{
+    width: 100%;
+    display: flex;
     text-decoration: none;
 }
 
-.welcome a input{
-    width: 250px;
-    height: 60px;
-    border-radius: 9px;
-    border: none;
-    background: #50AD51;
-    color: #FFF;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    cursor: pointer;
-    margin: 0 0 20px 0;
-    transition: background .4s;
-}
-
-.welcome a input:hover{
-    background: #336e34;
-}
-
-@media(max-width: 360px) and (max-height: 480px){
+@media(max-width: 420px){
     .welcome{
-        height: 100%;
-        row-gap: unset;
-        justify-content: space-between;
+        padding: 44px 20px 40px;
+        background: #262F2F;
+        position: unset;
+        border-radius: 0;
+        max-width: unset;
+        width: 100%;
     }
-    @media(max-width: 360px) and (max-height: 400px){
-        .welcome{
-            height: unset;
-            row-gap: 20px;
-        }
+    .welcome h1{
+        font-size: 38px;
     }
-}
-
-@media(min-width: 768px){
     .container-welcome{
-        padding: 20px;
-        background: #00000080;
-    }
-
-    .welcome{
-        height: 100%;
-        max-height: 640px;
-        max-width: 360px;
-        position: relative;
-        border-radius: 30px;
-        background-image: linear-gradient(#514E53, #262F2F);
-        justify-content: center;
-    }
-
-    @media(max-width: 1439px) and (max-height: 550px){
-        .welcome{
-            justify-content: space-between;
-            row-gap: unset;
-        }
-
-        @media(max-width: 1439px) and (max-height: 450px){
-            .welcome{
-                row-gap: 20px;
-                overflow-y: auto;
-            }
-
-            .welcome::-webkit-scrollbar{
-                width: 0px;
-            }
-        }
+        background: #262F2F;
+        padding: 0;
     }
 }
 
-@media(min-width: 1440px){
-    .welcome{
-        height: 100%;
-        max-height: 420px;
-        max-width: 730px;
-        padding: 60px;
-        row-gap: unset;
-        justify-content: space-between;
-    }
+/*Login Style*/
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Inter:wght@100..900&display=swap');
 
-    .welcome div{
-        margin: 0;
-    }
-
-    .welcome span{
-        top: 52px;
-        right: 28px;
-    }
-
-    .welcome a input{
-        margin: 0;
-    }
-
-    @media(min-width: 769px) and (max-height: 430px){
-        .welcome{
-            overflow-y: auto;
-            height: 100%;
-            justify-content: space-between;
-            row-gap: unset;
-            padding: 20px 0;
-        }
-
-        .welcome::-webkit-scrollbar{
-            width: 0;
-        }
-
-        .welcome span{
-            top: 29px;
-        }
-        @media(min-width: 769px) and (max-height: 340px){
-            .welcome{
-                row-gap: 20px;
-            }
-        }
-    }
-}
-
-/*Style Login Popup*/
 .container-login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    background: #000;
-    border: 1px solid #fff;
+    background: #00000080;
     overflow-y: auto;
-    z-index: 3;
+    padding: 50px 15px;
+    z-index: 2;
 }
 
 .container-login.ocult{
@@ -1421,20 +1538,34 @@ footer .bottom p:last-child{
 
 .login{
     width: 100%;
-    height: 100%;
+    max-width: 360px;
     margin: auto 0;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 32px 50px 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    max-width: 360px;
     position: relative;
-    row-gap: 20px;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
-.login #close{
+.login span{
+    color: red;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 10px 0;
+}
+
+.login span.oculted{
+    display: none;
+}
+
+.login h2{
     color: #FFF;
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -1443,57 +1574,38 @@ footer .bottom p:last-child{
     font-weight: 700;
     line-height: normal;
     position: absolute;
-    top: 8px;
     right: 20px;
+    top: 6px;
     cursor: pointer;
-    transition: color .4s;
+    transition: color .2s;
 }
 
-.login #close:hover{
-    color: #940000;
-}
-
-.incorrect{
-    font-size: 12px;
-    color: red;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    margin: 10px 0 0 0;
-}
-
-.incorrect.oculted{
-    display: none;
-}
-
-.login img{
-    width: 100px;
-    min-width: 100px;
-    height: 107px;
-    min-height: 107px;
+.login h2:hover{
+    color: #6a0101;
 }
 
 .login h1{
     color: #FFF;
     font-family: 'Kodchasan', sans-serif;
-    font-size: 32px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0 0 10px 0;
 }
 
 .login div{
     width: 100%;
-    max-width: 250px;
     display: flex;
     flex-direction: column;
     margin: 0 0 10px 0;
 }
 
 .login div input{
-    height: 45px;
+    height: 50px;
     color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-family: 'Kokoro', sans-serif;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1512,15 +1624,15 @@ footer .bottom p:last-child{
     border-radius: 20px 20px 0 0;
 }
 
-.login div input:nth-child(2){
+.login div input:last-child{
     border-top: 1px solid #4B494B !important;
     border-radius: 0 0 20px 20px;
 }
 
 .login div input::placeholder{
     color: #C1BAC2;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-family: 'Kokoro', sans-serif;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1534,17 +1646,21 @@ footer .bottom p:last-child{
     font-weight: 400;
     line-height: normal;
     text-decoration-line: underline;
+    margin: 0 0 16px 0;
 }
 
 .login label{
     width: unset;
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    margin: 0 0 52px 0;
     cursor: pointer;
+    margin: 0 0 25px 0;
 }
 
 .login label input{
+    width: 18px;
+    height: 18px;
     display: none;
 }
 
@@ -1553,58 +1669,55 @@ footer .bottom p:last-child{
 }
 
 .login label div{
-    height: 20px;
-    min-height: 20px;
-    width: 20px;
-    min-width: 20px;
+    height: 28px;
+    min-height: 28px;
+    width: 28px;
+    min-width: 28px;
     border: 1px solid #ECEAEC;
     background: #242426;
     position: relative;
-    border-radius: 5px;
     margin: 0;
 }
 
 .login label div::before{
     content: '';
     opacity: 0;
-    height: 9px;
-    width: 6px;
-    border-right: 2px solid #ECEAEC;
-    border-bottom: 2px solid #ECEAEC;
+    height: 15px;
+    width: 9px;
+    border-right: 3px solid #ECEAEC;
+    border-bottom: 3px solid #ECEAEC;
     border-radius: 2px;
     transform: rotate(45deg);
     position: absolute;
-    left: 5px;
-    bottom: 5px;
-    transition: opacity .4s;
+    left: 7px;
+    bottom: 7px;
+    transition: opacity .2s;
 }
 
 .login label p{
+    width: unset;
     color: #FFF;
     font-family: 'Alatsi', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0 0 0 20px;
 }
 
-.login label p a{
-    color: #00B2FF;
-    font-family: 'Inder', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration-line: underline;
+.login .logo{
+    width: 117px;
+    min-width: 117px;
+    height: 121px;
+    min-height: 117px;
+    margin: 50px 0 10px 0;
+    display: none;
 }
 
 .login .b-login{
-    height: 45px;
-    min-height: 45px;
-    width: 125px;
-    border-radius: 10px;
+    width: 123px;
+    height: 46px;
     background: #0083CC;
-    border: none;
     color: #FFF;
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -1612,218 +1725,36 @@ footer .bottom p:last-child{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    border: 1px solid #FFF;
     cursor: pointer;
+    border-radius: 9px;
     transition: background .2s;
 }
 
 .login .b-login:hover{
-    background: #016195;
+    background: #016aa2;
 }
 
-@media(max-width: 767px) and (max-height: 540px){
-    .login{
-        height: 100%;
-        padding: 10px 10px;
-        row-gap: unset;
-        justify-content: space-between;
-    }
-
-    @media(max-width: 767px) and (max-height: 460px){
-        .login img {
-            width: 60px;
-            min-width: 60px;
-            height: 67px;
-            min-height: 67px;
-        }
-
-        .login h1 {
-            display: none;
-        }
-
-        .login div input {
-            height: 40px;
-        }
-
-        @media(max-width: 767px) and (max-height: 380px){
-            .login{
-                row-gap: 20px;
-            }
-        }
-    }
-}
-
-@media(min-width: 768px){
+@media(max-width: 420px){
     .container-login{
-        background: #00000090;
-        border: none;
-    }
-
-    .login{
-        height: unset;
-        max-width: 360px;
+        padding: 0;
         background: #000;
-        border-radius: 30px;
-        row-gap: 20px;
-        padding: 60px 15px;
     }
-    @media(max-width: 1439px) and (max-height: 660px){
-        .container-login{
-            padding: 15px 20px;
-        }
 
-        .login{
-            height: 100%;
-            justify-content: space-between;
-            row-gap: 0;
-            padding: 20px 15px;
-        }
-
-        @media(max-width: 1439px) and (max-height: 550px){
-            .login h1{
-                font-size: 20px;
-            }
-
-            @media(max-width: 1439px) and (max-height: 520px){
-                .login h1{
-                    display: none;
-                }
-                
-                .login div input {
-                    height: 40px;
-                }
-
-                .login img {
-                    width: 60px;
-                    min-width: 60px;
-                    height: 67px;
-                    min-height: 67px;
-                }
-
-                @media(max-width: 1439px) and (max-height: 410px){
-                    .login{
-                        padding: 10px 15px;
-                    }
-
-                    @media(max-width: 1439px) and (max-height: 390px){
-                        .login{
-                            padding: 20px 15px;
-                            row-gap: 20px;
-                            overflow-y: auto;
-                        }
-
-                        .login::-webkit-scrollbar{
-                            width: 0px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media(min-width: 1440px){
     .login{
-        padding: 55px 15px 40px;
-        row-gap: 40px;
+        position: unset;
+        background: #000;
+        border-radius: 0;
+        max-width: unset;
+        width: 100%;
+        padding: 32px 20px 36px;
     }
 
-    .login img{
-        width: 200px;
-        min-width: 200px;
-        height: 214px;
-        min-height: 214px;
-    }
-
-    .login h1{
-        color: #FFF;
-        font-family: 'Kodchasan', sans-serif;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    @media(min-width: 769px) and (max-height: 880px){
-        .container-login{
-            padding: 45px 15px;
-        }
-
-        .login{
-            height: 100%;
-            row-gap: unset;
-            justify-content: space-between;
-        }
-
-        @media(min-width: 769px) and (max-height: 770px){
-            .container-login{
-                padding: 20px 15px;
-            }
-
-            .login{
-                padding: 20px 15px;
-                height: 100%;
-                row-gap: unset;
-                justify-content: space-between;
-            }
-
-            @media(min-width: 769px) and (max-height: 650px){
-                .login img{
-                    width: 100px;
-                    min-width: 100px;
-                    height: 107px;
-                    min-height: 107px;
-                }
-
-                .login h1{
-                    font-size: 32px;
-                }
-
-                @media(min-width: 769px) and (max-height: 550px){
-                    .login h1{
-                        font-size: 20px;
-                    }
-        
-                    @media(min-width: 769px) and (max-height: 520px){
-                        .login h1{
-                            display: none;
-                        }
-                        
-                        .login div input {
-                            height: 40px;
-                        }
-        
-                        .login img {
-                            width: 60px;
-                            min-width: 60px;
-                            height: 67px;
-                            min-height: 67px;
-                        }
-        
-                        @media(min-width: 769px) and (max-height: 410px){
-                            .login{
-                                padding: 10px 15px;
-                            }
-        
-                            @media(min-width: 769px) and (max-height: 390px){
-                                .login{
-                                    padding: 20px 15px;
-                                    row-gap: 20px;
-                                    overflow-y: auto;
-                                }
-        
-                                .login::-webkit-scrollbar{
-                                    width: 0px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    .login .logo{
+        display: flex;
     }
 }
 
-/* Animations */
 @keyframes rotateContent {
     0%{
         transform: rotateY(0deg);
