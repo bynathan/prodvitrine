@@ -928,12 +928,14 @@ footer .bottom p:last-child{
 }
 
 .age{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 50px;
     padding: 15px 10px;
     margin: auto 0;
+    z-index: 5;
 }
 
 .age img{
@@ -1206,13 +1208,14 @@ footer .bottom p:last-child{
 }
 
 .welcome{
-    width: 100%;
+    width: 100vw;
     margin: auto 0;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 50px;
+    z-index: 4;
 }
 
 .welcome span{
@@ -1415,7 +1418,7 @@ footer .bottom p:last-child{
 }
 
 .login{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     margin: auto 0;
     display: flex;
@@ -1424,6 +1427,7 @@ footer .bottom p:last-child{
     justify-content: center;
     position: relative;
     row-gap: 20px;
+    z-index: 3;
 }
 
 .login #close{
