@@ -190,7 +190,6 @@ body.conditions{
     overflow-x: auto;
     margin: 0 0 18px 0;
     cursor: grab;
-    z-index: -1;
 }
 
 .home .section .highlight{
@@ -464,7 +463,7 @@ footer .bottom p:last-child{
     overflow-y: auto;
     width: 100%;
     height: 100%;
-    padding: 14px 14px 100px;
+    padding: 14px 14px 35px;
     border-radius: 0 30px 30px 0;
     display: flex;
     flex-direction: column;
@@ -928,14 +927,12 @@ footer .bottom p:last-child{
 }
 
 .age{
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 50px;
     padding: 15px 10px;
     margin: auto 0;
-    z-index: 5;
 }
 
 .age img{
@@ -1208,14 +1205,13 @@ footer .bottom p:last-child{
 }
 
 .welcome{
-    width: 100vw;
+    width: 100%;
     margin: auto 0;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 50px;
-    z-index: 4;
 }
 
 .welcome span{
@@ -1418,7 +1414,7 @@ footer .bottom p:last-child{
 }
 
 .login{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     margin: auto 0;
     display: flex;
@@ -1427,7 +1423,6 @@ footer .bottom p:last-child{
     justify-content: center;
     position: relative;
     row-gap: 20px;
-    z-index: 3;
 }
 
 .login #close{
