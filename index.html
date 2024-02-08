@@ -351,7 +351,8 @@
         const senha = document.getElementById('password').value;
     
         const incorrectMenssage = document.getElementById('incorrect');
-    
+        let btnLoginOpen = document.getElementById('logged');
+
         fetch('/', {
             method: 'POST',
             headers: {
@@ -365,13 +366,11 @@
                     incorrectMenssage.classList.add('oculted');
                 }, 5000)
             } else if (response.status === 200) {
-                let btnLoginOpen = document.getElementById('logged');
-
                 btnLoginOpen.addEventListener('click', () => {
                     ocultVerification.classList.add('ocult');
                     conditions.classList.remove('conditions');
                 })
-                
+
                 response.json().then(data => {
                     if (data.redirect) {
                         window.location.href = data.redirect;
